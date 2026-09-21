@@ -1,0 +1,790 @@
+/* Configuracion inicial basica */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: #f5f1e9;
+    color: #24352f;
+    font-family: Arial, sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* formulario */
+.mensaje-formulario {
+    min-height: 20px;
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.mensaje-formulario.exito {
+    color: #52705f;
+}
+
+.mensaje-formulario.error {
+    color: #b56e55;
+}
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+
+    color: white;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+.logo small {
+    margin-top: 3px;
+
+    font-family: Arial, sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    font-size: 12px;
+}
+.nav-contacto {
+    padding: 12px 20px;
+
+    background: white;
+    color: #24352f;
+
+    border-radius: 30px;
+}
+/* HERO */
+.hero {
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+   background-image:
+    linear-gradient(
+        90deg,
+        rgba(27, 42, 35, 0.72) 0%,
+        rgba(27, 42, 35, 0.45) 45%,
+        rgba(27, 42, 35, 0.15) 100%
+    ),
+    url("../img/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+.hero-contenido {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding-top: 60px;
+}
+.hero-etiqueta {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+.hero h1 {
+    margin: 0;
+    max-width: 750px;
+    font-family: Georgia, serif;
+    font-size: clamp(46px, 5.5vw, 76px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+.hero-descripcion {
+    max-width: 500px;
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.88);
+}
+.hero-botones {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+.hero-trayectoria {
+    margin-top: 24px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.boton {
+    padding: 14px 22px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+}
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+}
+.boton-claro {
+    background: white;
+    color: #24352f;
+}
+.boton-oscuro {
+    background: white;
+    color: #24352f;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+}
+.boton-oscuro:hover {
+    background: transparent;
+    color: white;
+}
+/* Sobre mi: diseño de la seccion de Silvia */
+/* =========================
+   SOBRE SILVIA
+========================= */
+.sobre-mi {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    min-height: 520px;
+    background: #f5f1e9;
+}
+.sobre-imagen {
+    min-height: 520px;
+    padding: 60px 0 60px 60px;
+}
+.sobre-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.sobre-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+.sobre-contenido h2 {
+    max-width: 600px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 4vw, 60px);
+    font-weight: normal;
+    line-height: 1.05;
+    color: #24352f;
+}
+.sobre-texto {
+    max-width: 500px;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #59655f;
+}
+.frase {
+    margin-top: 20px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #b56e55;
+}
+.sobre-contenido .boton {
+    align-self: flex-start;
+    margin-top: 25px;
+}
+.trayectoria {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #d8d1c5;
+}
+
+.trayectoria strong {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #24352f;
+}
+
+.trayectoria span {
+    color: #68716c;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.trayectoria small {
+    margin-top: 8px;
+    color: #b56e55;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+/* =========================
+   SERVICIOS
+========================= */
+.servicios {
+    background: #1e342d;
+    color: #f5f1e9;
+    padding: 100px 6%;
+}
+.servicios-cabecera {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+.servicios-cabecera h2 {
+    max-width: 700px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: normal;
+    line-height: 1;
+}
+.servicios-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.servicio {
+    min-height: 300px;
+    padding: 25px;
+    border: 1px solid rgba(245, 241, 233, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.servicio-numero {
+    font-size: 10px;
+    color: #c98a70;
+}
+.servicio-icono {
+    margin-top: 35px;
+    font-size: 25px;
+    color: #c8d0ca;
+}
+.servicio h3 {
+    margin: 20px 0 10px;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+}
+.servicio p {
+    max-width: 300px;
+    margin: 0;
+    color: #bdc8c2;
+    font-size: 12px;
+    line-height: 1.6;
+}
+/* El estilo de como sera la pagina del PROCESO para trabajar con Silvia */
+/* =========================
+   PROCESO
+========================= */
+.proceso {
+    background: #f5f1e9;
+    padding: 110px 6%;
+}
+.proceso-cabecera {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.proceso-cabecera h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: normal;
+    line-height: 1;
+    color: #24352f;
+}
+.proceso-grid {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #d8d1c5;
+}
+.paso {
+    padding: 20px 25px 0 0;
+}
+.paso + .paso {
+    padding-left: 25px;
+    border-left: 1px solid #d8d1c5;
+}
+.paso span {
+    color: #b56e55;
+    font-size: 10px;
+}
+.paso h3 {
+    margin: 35px 0 15px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #24352f;
+}
+.paso p {
+    max-width: 230px;
+    margin: 0;
+    color: #68716c;
+    font-size: 11px;
+    line-height: 1.7;
+}
+/* en el sig bloque vamos a dejar elk estilo de la seccion de clientes */
+/* =========================
+   CLIENTES
+========================= */
+
+.clientes {
+    background: #f5f1e9;
+    padding: 120px 6%;
+    color: #24352f;
+}
+
+.clientes-cabecera {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clientes-cabecera h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: normal;
+    line-height: 0.95;
+}
+
+.clientes-intro {
+    max-width: 430px;
+    margin: 30px 0 0;
+    color: #68716c;
+    font-size: 13px;
+    line-height: 1.7;
+}
+/* GRID */
+.clientes-grid {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #d8d1c5;
+}
+/* TARJETA */
+.cliente {
+    min-height: 280px;
+    padding: 25px 30px 30px 0;
+    border-bottom: 1px solid #d8d1c5;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        padding 0.3s ease;
+}
+.cliente:nth-child(3n + 2),
+.cliente:nth-child(3n + 3) {
+    padding-left: 30px;
+    border-left: 1px solid #d8d1c5;
+}
+/* PARTE SUPERIOR */
+.cliente-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cliente-numero {
+    color: #b56e55;
+    font-size: 10px;
+}
+.cliente-icono {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b56e55;
+    border-radius: 50%;
+    color: #b56e55;
+    font-size: 16px;
+    font-weight: normal;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+/* TEXTO */
+.cliente h3 {
+    margin: 45px 0 10px;
+
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+}
+.cliente-profesion {
+    margin: 0;
+
+    color: #68716c;
+    font-size: 11px;
+    line-height: 1.5;
+}
+/* DETALLE */
+
+.cliente-detalle {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        margin-top 0.4s ease;
+}
+
+.cliente-detalle p {
+    max-width: 300px;
+    margin: 0;
+
+    color: #68716c;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* HOVER */
+
+.cliente:hover {
+    background: #eee9df;
+}
+
+.cliente:hover .cliente-icono {
+    transform: rotate(90deg);
+}
+
+
+/* CLIENTE ABIERTO */
+
+.cliente.activo {
+    background: #eee9df;
+}
+
+.cliente.activo .cliente-icono {
+    transform: rotate(45deg);
+    background: #b56e55;
+    color: #f5f1e9;
+}
+
+.cliente.activo .cliente-detalle {
+    max-height: 150px;
+    margin-top: 25px;
+    opacity: 1;
+}
+/* ULTIMA PARTE y es CONTACTO */
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    background: #f5f1e9;
+    padding: 120px 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.contacto-info {
+    max-width: 550px;
+}
+
+.contacto-info h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 5vw, 68px);
+    font-weight: normal;
+    line-height: 0.98;
+    color: #24352f;
+}
+
+.contacto-texto {
+    max-width: 430px;
+    margin: 35px 0 0;
+    color: #68716c;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contacto-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 45px;
+}
+
+.contacto-boton {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 14px 20px;
+    border: 1px solid #24352f;
+    border-radius: 30px;
+    color: #24352f;
+    text-decoration: none;
+    font-size: 11px;
+    transition: all 0.3s ease;
+}
+
+.contacto-boton span {
+    font-size: 16px;
+}
+
+.contacto-boton:hover {
+    background: #24352f;
+    color: #f5f1e9;
+}
+
+
+/* FORMULARIO */
+
+.formulario-contacto {
+    max-width: 550px;
+    width: 100%;
+}
+
+.campo {
+    margin-bottom: 30px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 10px;
+    color: #24352f;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #cfc7ba;
+    background: transparent;
+    color: #24352f;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9a9e9b;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-bottom-color: #24352f;
+}
+
+.boton-enviar {
+    margin-top: 10px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #24352f;
+    color: #f5f1e9;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-enviar span {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.boton-enviar:hover {
+    background: #b56e55;
+}
+/* parte final de la web estatica */
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #24352f;
+    color: #f5f1e9;
+    padding: 70px 6% 25px;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer .logo {
+    display: inline-flex;
+    flex-direction: column;
+    color: #f5f1e9;
+    text-decoration: none;
+}
+
+.footer .logo span {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.footer .logo small {
+    margin-top: 3px;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.footer-marca p {
+    max-width: 250px;
+    margin-top: 25px;
+    color: #bdc8c2;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.footer-enlaces,
+.footer-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-enlaces a,
+.footer-contacto a {
+    color: #bdc8c2;
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover,
+.footer-contacto a:hover {
+    color: #c98a70;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(245, 241, 233, 0.15);
+    display: flex;
+    justify-content: space-between;
+    color: #89958f;
+    font-size: 9px;
+}
+/* Aqui vamos a poner la seccion movil */
+@media (max-width: 768px) {
+        .header {
+        padding: 20px 5%;
+    }
+    .nav {
+        gap: 12px;
+        font-size: 10px;
+    }
+    .nav-contacto {
+        padding: 9px 14px;
+    }
+    .logo {
+        font-size: 16px;
+    }
+    .sobre-mi {
+        grid-template-columns: 1fr;
+    }
+   .sobre-imagen {
+        min-height: 400px;
+        padding: 30px 6% 0;
+    }
+    .sobre-contenido {
+        padding: 70px 6%;
+    }
+    .servicios-grid {
+    grid-template-columns: 1fr;
+}
+.servicio {
+    min-height: 250px;
+}
+.proceso {
+    padding: 80px 6%;
+}
+.proceso-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+.paso {
+    padding: 25px 15px 25px 0;
+}
+.paso + .paso {
+    padding-left: 15px;
+}
+.paso:nth-child(3) {
+    border-left: none;
+    padding-left: 0;
+}
+.contacto {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 80px 6%;
+    }
+
+    .contacto-info h2 {
+        font-size: 48px;
+    }
+
+    .contacto-botones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacto-boton {
+        width: auto;
+    }
+    .footer-contenido {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+}
+}
