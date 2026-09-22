@@ -48,19 +48,10 @@ a {
 
     color: white;
 }
-.logo {
-    display: flex;
-    flex-direction: column;
-
-    font-family: Georgia, serif;
-    font-size: 18px;
-}
-.logo small {
-    margin-top: 3px;
-
-    font-family: Arial, sans-serif;
-    font-size: 7px;
-    letter-spacing: 2px;
+.logo img {
+    display: block;
+    width: 250px;
+    height: auto;
 }
 .nav {
     display: flex;
@@ -76,6 +67,21 @@ a {
     color: #24352f;
 
     border-radius: 30px;
+}
+.nav-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-social svg {
+    width: 35px;
+    height: 35px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
 }
 /* HERO */
 .hero {
