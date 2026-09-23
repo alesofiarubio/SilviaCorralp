@@ -11,29 +11,46 @@
 <!-- vamos a empezar haciendo la parte del navbar, la idea es mostrar una pagina ELEGANTE pero moderna a su vez  -->
  <!-- Sobre mí | Servicios | Mi forma de trabajar | clientes | Hablemos -->
     <header class="header">
-        <!-- vamos a sustituir por el logo orinal -->
         <a href="#" class="logo">
             <img src="img/logo.png" alt="Silvia Corral Propiedades">
         </a>
-        <!-- voy a agregar los botones de whatsapp e instagram a ver que tal queda -->
-        <nav class="nav">
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#proceso">forma de trabajar</a>
-            <a href="#clientes">Clientes</a>
-            <!-- aqui vamos a añadir los botones de contacto, whatsapp e instagram  -->
-          <a
-            href="#"
-            class="nav-social"
-            id="nav-whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.9-1.3A9.5 9.5 0 1 0 12 2.5Z"></path>
-                <path d="M8.4 7.7c.2-.4.4-.5.7-.5h.6c.2 0 .4.1.5.4l.8 1.7c.1.2.1.4-.1.6l-.6.7c.7 1.2 1.6 2.1 2.8 2.8l.7-.6c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5v.6c0 .3-.1.5-.5.7-.5.3-1.2.3-1.8.1-2.3-.8-4.1-2.6-4.9-4.9-.2-.6-.2-1.3.1-1.8Z"></path>
-            </svg>
+
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="nav-menu">
+            <a href="#sobre-mi" data-i18n="navSobreMi">Sobre mí</a>
+            <a href="#servicios" data-i18n="navServicios">Servicios</a>
+            <a href="#proceso" data-i18n="navProceso">Forma de trabajar</a>
+            <a href="#clientes" data-i18n="navClientes">Clientes</a>
+
+            <div class="lang-switcher" aria-label="Selector de idioma">
+                <button class="lang-toggle" id="lang-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                    ES
+                </button>
+                <div class="lang-menu" id="lang-menu" role="menu" aria-label="Idiomas">
+                    <button class="lang-option active" type="button" data-lang="es" role="menuitem">ES</button>
+                    <button class="lang-option" type="button" data-lang="en" role="menuitem">EN</button>
+                    <button class="lang-option" type="button" data-lang="pt" role="menuitem">PT</button>
+                </div>
+            </div>
+
+            <a
+                href="https://wa.me/34600000000?text=Hola%20Silvia%2C%20he%20visto%20tu%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+                class="nav-social"
+                id="nav-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                title="Contactar por WhatsApp"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.9-1.3A9.5 9.5 0 1 0 12 2.5Z"></path>
+                    <path d="M8.4 7.7c.2-.4.4-.5.7-.5h.6c.2 0 .4.1.5.4l.8 1.7c.1.2.1.4-.1.6l-.6.7c.7 1.2 1.6 2.1 2.8 2.8l.7-.6c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5v.6c0 .3-.1.5-.5.7-.5.3-1.2.3-1.8.1-2.3-.8-4.1-2.6-4.9-4.9-.2-.6-.2-1.3.1-1.8Z"></path>
+                </svg>
             </a>
             <a
                 href="https://www.instagram.com/silviacorral.propiedades/"
@@ -42,42 +59,35 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17.5" cy="6.5" r="1"></circle>
-            </svg>
+                title="Instagram"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
             </a>
-            <a href="#contacto" class="nav-contacto">Hablemos</a>
+            <a href="#contacto" class="nav-contacto" data-i18n="navHablemos">Hablemos</a>
         </nav>
-<!-- 
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-            ☰
-        </button> -->
     </header>
     <main>
         <section class="hero">
 
             <div class="hero-contenido">
-                <p class="hero-etiqueta">
-                    TU PRÓXIMA DECISIÓN
-                </p>
-                <h1>
-                     ¿Tienes una idea?<br>
-                    Te ayudo a hacerla realidad.
+                <h1 data-i18n-html="heroTitle">
+                    TU PRÓXIMA DECISIÓN<br>
+                    <span>Te ayudo a hacerla realidad.</span>
                 </h1>
-                <p class="hero-descripcion">
-                    Comprar, vender o alquilar.
-                    Más de 30 años acompañando decisiones inmobiliarias
-                    con experiencia, contactos y cercanía.
+                <p class="hero-descripcion" data-i18n="heroDescription">
+                    Compra, venta y alquiler con criterio, cercanía y más de 30 años de experiencia
+                    acompañando decisiones inmobiliarias con claridad y confianza.
                 </p>
                 <p class="hero-trayectoria">
-                   Argentina · Brasil · Miami · Madrid
+                    Argentina · Miami · Madrid
                 </p>
                 <div class="hero-botones">
-                    <a href="#contacto" class="boton boton-oscuro">
-                         Cuéntame qué buscas →
+                    <a href="#contacto" class="boton boton-oscuro" data-i18n="heroButton">
+                        Cuéntame qué buscas →
                     </a>
                 </div>
             </div>
@@ -88,14 +98,14 @@
                 <img src="img/silvia.jpg" alt="Silvia Corral">
             </div>
             <div class="sobre-contenido">
-                <p class="etiqueta">
+                <p class="etiqueta" data-i18n="aboutLabel">
                     CONOCE A SILVIA
                 </p>
-            <h2>
-                No una agencia más.
-                Una asesora a tu lado,
+            <h2 data-i18n-html="aboutTitle">
+                No una agencia más,<br>
+                Una asesora a tu lado.
             </h2>
-            <p class="sobre-texto">
+            <p class="sobre-texto" data-i18n="aboutText">
                 Soy Silvia Corral, asesora inmobiliaria independiente
                 con más de 30 años de experiencia. Comencé mi trayectoria
                 en Argentina y, a lo largo de los años, he trabajado también
@@ -105,25 +115,82 @@
             </p>
             <div class="trayectoria">
                 <strong>+30 años</strong>
-                <span>de experiencia inmobiliaria</span>
-                <small>Argentina · Brasil · Miami · Madrid</small>
+                <span data-i18n="aboutExperience">de experiencia inmobiliaria</span>
+                <small>Argentina · Miami · Madrid</small>
             </div>
-            <p class="frase">
+            <p class="frase" data-i18n="aboutQuote">
                 "Escuchar primero. Encontrar después."
             </p>
-            <a href="#servicios" class="boton boton-oscuro">
+            <a href="#servicios" class="boton boton-oscuro" data-i18n="aboutButton">
                 Mi forma de trabajar
             </a>
             </div>
         </section>
+
+        <section class="armonizacion" id="armonizacion">
+            <div class="armonizacion-cabecera">
+                <p class="etiqueta" data-i18n="harmonyLabel">ARMONIZA TU AMBIENTE</p>
+                <h2 data-i18n="harmonyTitle">Tu espacio también influye en tu energía.</h2>
+            </div>
+
+            <div class="armonizacion-grid">
+                <article class="armonizacion-card card-feng">
+                    <div class="card-visual">
+                        <span>Feng Shui</span>
+                    </div>
+                    <div class="card-contenido">
+                        <p class="card-label" data-i18n="harmonyFengLabel">Equilibrio</p>
+                        <h3 data-i18n="harmonyFengTitle">Feng Shui</h3>
+                        <p data-i18n="harmonyFengText">
+                            El Feng Shui busca ordenar el espacio para que la energía circule con libertad,
+                            luz y claridad. Cuando un hogar está bien equilibrado, se siente más sereno,
+                            acogedor y funcional, algo esencial para tomar decisiones con calma y confianza.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="armonizacion-card card-access">
+                    <div class="card-visual">
+                        <span>Barra Access</span>
+                    </div>
+                    <div class="card-contenido">
+                        <p class="card-label" data-i18n="harmonyAccessLabel">Flujo</p>
+                        <h3 data-i18n="harmonyAccessTitle">Barra Access</h3>
+                        <p data-i18n="harmonyAccessText">
+                            La Barra Access trabaja sobre la energía del entorno para mejorar la sensación de
+                            bienestar, la conexión entre las personas y el uso del espacio. Es una forma de
+                            activar la armonía en casa o en negocio, favoreciendo ambientes más vivos,
+                            leves y positivos.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="armonizacion-card card-facelift">
+                    <div class="card-visual">
+                        <span>Facelift</span>
+                    </div>
+                    <div class="card-contenido">
+                        <p class="card-label" data-i18n="harmonyFaceliftLabel">Renovación</p>
+                        <h3 data-i18n="harmonyFaceliftTitle">Facelift</h3>
+                        <p data-i18n="harmonyFaceliftText">
+                            El Facelift es una transformación estética y funcional con un impacto inmediato:
+                            mejor distribución, más luz, mejores acabados y una imagen renovada. Es la forma
+                            de devolverle carácter y valor a un espacio sin perder la esencia que ya lo hace
+                            especial.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <!-- La seccion de servicios -->
          <section class="servicios" id="servicios">
             <div class="servicios-cabecera">
-            <p class="etiqueta">
+            <p class="etiqueta" data-i18n="servicesLabel">
                 CÓMO PUEDO AYUDARTE
             </p>
-        <h2>
-            Un servicio a medida
+        <h2 data-i18n-html="servicesTitle">
+            Un servicio a medida<br>
             de cada momento
         </h2>
         </div>
@@ -132,11 +199,9 @@
             <div class="servicio-icono">
                 ⌂
             </div>
-            <p class="servicio-etiqueta">Tu próxima casa</p>
-            <h3>
-                Comprar
-            </h3>
-            <p>
+            <p class="servicio-etiqueta" data-i18n="serviceBuyTag">Tu próxima casa</p>
+            <h3 data-i18n="serviceBuyTitle">Comprar</h3>
+            <p data-i18n="serviceBuyText">
                 Búsqueda cuidada, visitas con contexto
                 y negociación serena hasta encontrar
                 tu lugar.
@@ -146,11 +211,9 @@
             <div class="servicio-icono">
                 ◇
             </div>
-            <p class="servicio-etiqueta">Tu vivienda, valorada</p>
-            <h3>
-                Vender
-            </h3>
-            <p>
+            <p class="servicio-etiqueta" data-i18n="serviceSellTag">Tu vivienda, valorada</p>
+            <h3 data-i18n="serviceSellTitle">Vender</h3>
+            <p data-i18n="serviceSellText">
                 Estrategia de precio, narrativa visual
                 y difusión selectiva para poner en valor
                 tu vivienda.
@@ -160,11 +223,9 @@
             <div class="servicio-icono">
                 ⌂
             </div>
-            <p class="servicio-etiqueta">Gestión tranquila</p>
-            <h3>
-                Alquilar
-            </h3>
-            <p>
+            <p class="servicio-etiqueta" data-i18n="serviceRentTag">Gestión tranquila</p>
+            <h3 data-i18n="serviceRentTitle">Alquilar</h3>
+            <p data-i18n="serviceRentText">
                 Gestión cercana y rigurosa para
                 propietarios e inquilinos, de principio
                 a fin.
@@ -176,10 +237,10 @@
     para trabajar con Silvia  -->
     <section class="proceso" id="proceso">
     <div class="proceso-cabecera">
-        <p class="etiqueta">
+        <p class="etiqueta" data-i18n="processLabel">
             UN PROCESO SENCILLO
         </p>
-        <h2>
+        <h2 data-i18n-html="processTitle">
             De la primera conversación<br>
             a la decisión.
         </h2>
@@ -187,10 +248,8 @@
     <div class="proceso-grid">
         <article class="paso">
             <span>01</span>
-            <h3>
-                Nos conocemos
-            </h3>
-            <p>
+            <h3 data-i18n="processStep1Title">Nos conocemos</h3>
+            <p data-i18n="processStep1Text">
                 Una conversación sin compromiso
                 para entender tus necesidades,
                 tiempos y prioridades.
@@ -198,10 +257,8 @@
         </article>
         <article class="paso">
             <span>02</span>
-            <h3>
-                Trazamos el plan
-            </h3>
-            <p>
+            <h3 data-i18n="processStep2Title">Trazamos el plan</h3>
+            <p data-i18n="processStep2Text">
                 Definimos juntos la estrategia,
                 los objetivos y los siguientes
                 pasos.
@@ -209,20 +266,16 @@
         </article>
         <article class="paso">
             <span>03</span>
-            <h3>
-                Avanzamos juntos
-            </h3>
-            <p>
+            <h3 data-i18n="processStep3Title">Avanzamos juntos</h3>
+            <p data-i18n="processStep3Text">
                 Coordino visitas, documentación,
                 negociación y todos los detalles.
             </p>
         </article>
         <article class="paso">
             <span>04</span>
-            <h3>
-                Cerramos con calma
-            </h3>
-            <p>
+            <h3 data-i18n="processStep4Title">Cerramos con calma</h3>
+            <p data-i18n="processStep4Text">
                 Te acompaño hasta el final y también
                 después de tomar la decisión.
             </p>
@@ -233,14 +286,14 @@
      <section class="clientes" id="clientes">
 
     <div class="clientes-cabecera">
-        <p class="etiqueta">CLIENTES</p>
+        <p class="etiqueta" data-i18n="clientsLabel">CLIENTES</p>
 
-        <h2>
+        <h2 data-i18n-html="clientsTitle">
             Personas detrás<br>
             de cada decisión.
         </h2>
 
-        <p class="clientes-intro">
+        <p class="clientes-intro" data-i18n="clientsIntro">
             Algunas historias que forman parte
             de muchos años acompañando a personas,
             familias y profesionales.
@@ -256,14 +309,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Sandra B.</h3>
+            <h3 data-i18n="client1Name">Sandra B.</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client1Profession">
                 Directora de fondo de inversión
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client1Detail">
                     Asesoramiento especializado en
                     adquisición y posicionamiento para
                     perfiles de inversión.
@@ -278,14 +331,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Gianluca M.</h3>
+            <h3 data-i18n="client2Name">Gianluca M.</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client2Profession">
                 Lic. perito calígrafo
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client2Detail">
                     Gestión de venta de primera vivienda
                     con estrategia de mercado y cierre eficaz.
                 </p>
@@ -299,14 +352,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Sandra A.</h3>
+            <h3 data-i18n="client3Name">Sandra A.</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client3Profession">
                 España / Argentina
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client3Detail">
                     Venta de inmueble y gestión continua
                     de administración patrimonial desde
                     Argentina.
@@ -321,14 +374,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Pilar A.</h3>
+            <h3 data-i18n="client4Name">Pilar A.</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client4Profession">
                 España / Argentina
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client4Detail">
                     Intermediación en operación residencial
                     y continuidad en gestión administrativa
                     durante más de tres décadas.
@@ -343,14 +396,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Cecilia G.</h3>
+            <h3 data-i18n="client5Name">Cecilia G.</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client5Profession">
                 Argentina
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client5Detail">
                     Venta de inmueble con enfoque en
                     optimización de valor y transacción segura.
                 </p>
@@ -364,14 +417,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Rafael</h3>
+            <h3 data-i18n="client6Name">Rafael</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client6Profession">
                 Lic. en Ciencias Políticas · Embajador
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client6Detail">
                     Cierre de operación residencial para
                     perfil familiar con enfoque en rentabilidad
                     y conveniencia estratégica.
@@ -386,14 +439,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Dra. Anyelina</h3>
+            <h3 data-i18n="client7Name">Dra. Anyelina</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client7Profession">
                 Psiquiatra · República Dominicana
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client7Detail">
                     Búsqueda y contratación de vivienda
                     para familia con criterios de ubicación,
                     confort y estabilidad.
@@ -408,14 +461,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Kevin S.</h3>
+            <h3 data-i18n="client8Name">Kevin S.</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client8Profession">
                 Familia
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client8Detail">
                     Intermediación en venta de vivienda
                     unifamiliar para perfil familiar con
                     necesidad de traslado y reubicación.
@@ -430,14 +483,14 @@
                 <span class="cliente-icono">+</span>
             </div>
 
-            <h3>Fedra Dos Santos</h3>
+            <h3 data-i18n="client9Name">Fedra Dos Santos</h3>
 
-            <p class="cliente-profesion">
+            <p class="cliente-profesion" data-i18n="client9Profession">
                 Terapeuta · Brasil
             </p>
 
             <div class="cliente-detalle">
-                <p>
+                <p data-i18n="client9Detail">
                     Gestión de arrendamiento con selección
                     de inquilino y supervisión del proceso
                     de alquiler.
@@ -447,16 +500,21 @@
 
     </div>
 
+    <button class="clientes-mas" id="clientes-mas" type="button" aria-expanded="false">
+        Mostrar más
+        <span>→</span>
+    </button>
+
 </section>
     <!-- Seccion de cntacto, aqui tambien vamos añadir el icono de whatsapp y correos  -->
 <section class="contacto" id="contacto">
     <div class="contacto-info">
-        <p class="etiqueta">HABLEMOS</p>
-        <h2>
-            Tu próxima decisión
+        <p class="etiqueta" data-i18n="contactLabel">HABLEMOS</p>
+        <h2 data-i18n-html="contactTitle">
+            Tu próxima decisión<br>
             puede empezar aquí.
         </h2>
-        <p class="contacto-texto">
+        <p class="contacto-texto" data-i18n="contactText">
             Cuéntame qué necesitas y vemos juntos
             cómo puedo ayudarte. Sin compromiso,
             con calma y de forma cercana.
@@ -484,45 +542,50 @@
     </div>
     <form class="formulario-contacto" id="formulario-contacto" action="" method="POST" novalidate>
         <div class="campo">
-            <label for="nombre">Nombre</label>
+            <label for="nombre" data-i18n="contactName">Nombre</label>
             <input
                 type="text"
                 id="nombre"
                 name="nombre"
                 placeholder="Tu nombre"
-                required
+                data-i18n-placeholder="contactNamePlaceholder"
+                aria-invalid="false"
             >
         </div>
         <div class="campo">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="contactEmail">Email</label>
             <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="tu@email.com"
-                required
+                data-i18n-placeholder="contactEmailPlaceholder"
+                aria-invalid="false"
             >
         </div>
         <div class="campo">
-            <label for="telefono">Teléfono</label>
+            <label for="telefono" data-i18n="contactPhone">Teléfono</label>
             <input
                 type="tel"
                 id="telefono"
                 name="telefono"
                 placeholder="Tu teléfono"
+                data-i18n-placeholder="contactPhonePlaceholder"
+                aria-invalid="false"
             >
         </div>
         <div class="campo">
-            <label for="mensaje">¿En qué puedo ayudarte?</label>
+            <label for="mensaje" data-i18n="contactMessage">¿En qué puedo ayudarte?</label>
             <textarea
                 id="mensaje"
                 name="mensaje"
                 rows="5"
                 placeholder="Cuéntame brevemente qué necesitas..."
-                required
+                data-i18n-placeholder="contactMessagePlaceholder"
+                aria-invalid="false"
             ></textarea>
         </div>
-        <button type="submit" class="boton-enviar">
+        <button type="submit" class="boton-enviar" data-i18n="contactSubmit">
             Enviar mensaje
             <span>→</span>
         </button>
@@ -541,11 +604,11 @@
         </div>
         <div class="footer-enlaces">
 
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#proceso">Mi forma de trabajar</a>
-            <a href="#clientes">Clientes</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#sobre-mi" data-i18n="footerAbout">Sobre mí</a>
+            <a href="#servicios" data-i18n="footerServices">Servicios</a>
+            <a href="#proceso" data-i18n="footerProcess">Mi forma de trabajar</a>
+            <a href="#clientes" data-i18n="footerClients">Clientes</a>
+            <a href="#contacto" data-i18n="footerContact">Contacto</a>
         </div>
         <div class="footer-contacto">
             <a href="https://wa.me/34600000000"
@@ -556,7 +619,9 @@
             <a href="mailto:info@silviacorral.com">
                 Email
             </a>
-            <a href="#" target="_blank">
+            <a href="https://www.instagram.com/silviacorral.propiedades/"
+               target="_blank"
+               rel="noopener noreferrer">
                 Instagram
             </a>
         </div>
@@ -567,7 +632,7 @@
             © 2026 Silvia Corral Propiedades
         </span>
 
-        <span>
+        <span data-i18n="footerRights">
             Todos los derechos reservados
         </span>
 
