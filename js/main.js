@@ -1,6 +1,6 @@
 // empezamos con los datos del contacto
 const datosContacto = {
-    whatsapp: "34600000000",
+    whatsapp: "34696042151",
     email: "info@silviacorral.com"
 };
 
@@ -12,11 +12,11 @@ const translations = {
         navClientes: "Clientes",
         navHablemos: "Hablemos",
         heroTitle: "TU PRÓXIMA DECISIÓN<br><span>Te ayudo a hacerla realidad.</span>",
-        heroDescription: "Compra, venta y alquiler con criterio, cercanía y más de 30 años de experiencia acompañando decisiones inmobiliarias con claridad y confianza.",
+        heroDescription: "Compra, venta y alquiler con criterio, cercanía y más de 35 años de experiencia acompañando decisiones inmobiliarias con claridad y confianza.",
         heroButton: "Cuéntame qué buscas →",
         aboutLabel: "CONOCE A SILVIA",
         aboutTitle: "No una agencia más,<br>Una asesora a tu lado.",
-        aboutText: "Soy Silvia Corral, asesora inmobiliaria independiente con más de 30 años de experiencia. Comencé mi trayectoria en Argentina y, a lo largo de los años, he trabajado también en Brasil y Miami. Hoy desarrollo mi actividad en Madrid, acompañando a cada cliente con el mismo compromiso y cercanía que han marcado mi forma de trabajar desde el principio.",
+        aboutText: "Soy Silvia Corral, asesora inmobiliaria independiente con más de 35 años de experiencia. Comencé mi trayectoria en Argentina y, a lo largo de los años, he trabajado también en Brasil y Miami. Hoy desarrollo mi actividad en Madrid, acompañando a cada cliente con el mismo compromiso y cercanía que han marcado mi forma de trabajar desde el principio.",
         aboutExperience: "de experiencia inmobiliaria",
         aboutQuote: '"Escuchar primero. Encontrar después."',
         aboutButton: "Mi forma de trabajar",
@@ -409,6 +409,34 @@ langOptions.forEach((option) => {
 
 setLanguage("es");
 
+const heroSlides = document.querySelectorAll(".hero-slide");
+const heroDots = document.querySelectorAll(".hero-dot");
+let heroIndex = 0;
+
+if (heroSlides.length > 1) {
+    const mostrarSlide = (index) => {
+        heroIndex = (index + heroSlides.length) % heroSlides.length;
+
+        heroSlides.forEach((slide, slideIndex) => {
+            slide.classList.toggle("active", slideIndex === heroIndex);
+        });
+
+        heroDots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === heroIndex;
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute("aria-pressed", String(isActive));
+        });
+    };
+
+    heroDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => mostrarSlide(index));
+    });
+
+    setInterval(() => {
+        mostrarSlide(heroIndex + 1);
+    }, 5000);
+}
+
 // aqui vamos a desarrollar la funcion del boton de whatsapp para que al hacer click en el boton se abra 
 // la aplicacion de whatsapp con un mensaje predefinido y el numero de telefono de contacto.
 const mensajeWhatsapp =
@@ -613,6 +641,15 @@ if (formulario && mensajeFormulario) {
 
         mensajeFormulario.textContent = langData.formSending;
         mensajeFormulario.className = "mensaje-formulario";
+
+        const telefonoInput = formulario.querySelector("#telefono");
+        const prefijoTelefono = formulario.querySelector("#prefijo-telefono");
+
+        if (telefonoInput) {
+            const valorTelefono = telefonoInput.value.trim();
+            const prefijo = prefijoTelefono ? prefijoTelefono.value : "+34";
+            telefonoInput.value = valorTelefono ? `${prefijo} ${valorTelefono}` : "";
+        }
 
         const datos = new FormData(formulario);
         datos.append("lang", document.documentElement.lang || "es");
