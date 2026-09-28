@@ -1,7 +1,7 @@
 // empezamos con los datos del contacto
 const datosContacto = {
     whatsapp: "34696042151",
-    email: "info@silviacorral.com"
+    email: "mudateconsilviacorral@gmail.com"
 };
 
 const translations = {
@@ -15,7 +15,7 @@ const translations = {
         heroDescription: "Compra, venta y alquiler con criterio, cercanía y más de 35 años de experiencia acompañando decisiones inmobiliarias con claridad y confianza.",
         heroButton: "Cuéntame qué buscas →",
         aboutLabel: "CONOCE A SILVIA",
-        aboutTitle: "No una agencia más,<br>Una asesora a tu lado.",
+        aboutTitle: "No una agencia más,<br>Es una asesora a tu lado.",
         aboutText: "Soy Silvia Corral, asesora inmobiliaria independiente con más de 35 años de experiencia. Comencé mi trayectoria en Argentina y, a lo largo de los años, he trabajado también en Brasil y Miami. Hoy desarrollo mi actividad en Madrid, acompañando a cada cliente con el mismo compromiso y cercanía que han marcado mi forma de trabajar desde el principio.",
         aboutExperience: "de experiencia inmobiliaria",
         aboutQuote: '"Escuchar primero. Encontrar después."',
@@ -463,7 +463,18 @@ if (navInstagram) {
 const botonEmail = document.querySelector("#boton-email");
 if (botonEmail) {
     botonEmail.href = `mailto:${datosContacto.email}`;
+    botonEmail.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = `mailto:${datosContacto.email}`;
+    });
 }
+
+document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = link.href;
+    });
+});
 // =========================
 // CLIENTES INTERACTIVOS
 // // =========================
