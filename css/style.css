@@ -199,8 +199,8 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.06);
@@ -1344,24 +1344,38 @@ a {
         font-size: 12px;
     }
 
+    .nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
     .nav-contacto {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 11px 16px;
-        width: auto;
+        padding: 12px 18px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
         font-size: 11px;
+        border-radius: 999px;
     }
 
     .nav-social {
         display: inline-flex;
-        width: 32px;
-        height: 32px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        border-radius: 999px;
+        flex-shrink: 0;
     }
 
-    .nav-social svg {
-        width: 24px;
-        height: 24px;
+    .nav-social + .nav-social,
+    .nav-social + .nav-contacto,
+    .nav-contacto + .nav-social {
+        margin-left: 6px;
     }
 
     .hero {
@@ -1370,35 +1384,52 @@ a {
     }
 
     .hero-contenido {
-        width: 88%;
-        padding-top: 10px;
+        width: 90%;
+        padding-top: 22px;
+        padding-left: 0;
     }
 
     .hero h1 {
         max-width: 100%;
-        font-size: clamp(34px, 10vw, 52px);
+        font-size: clamp(38px, 11vw, 58px);
+        line-height: 0.92;
         letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+        margin-top: 14px;
     }
 
     .hero-descripcion {
         max-width: 100%;
-        font-size: 13px;
+        margin-top: 22px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-trayectoria {
+        margin-top: 18px;
+        font-size: 10px;
+        letter-spacing: 1.4px;
     }
 
     .hero-botones {
         flex-direction: column;
         align-items: stretch;
+        gap: 14px;
+        margin-top: 28px;
     }
 
     .hero-botones .boton {
         width: 100%;
         text-align: center;
-        padding: 16px 20px;
-        font-size: 13px;
-        min-height: 52px;
+        padding: 18px 22px;
+        font-size: 15px;
+        min-height: 56px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        border-radius: 999px;
     }
 
     .sobre-imagen {
@@ -1488,9 +1519,14 @@ a {
     }
 
     .contacto {
+        grid-template-columns: 1fr;
         padding-top: 80px;
         padding-bottom: 80px;
-        gap: 42px;
+        gap: 32px;
+    }
+
+    .contacto-info {
+        max-width: 100%;
     }
 
     .contacto-info h2 {
@@ -1500,6 +1536,7 @@ a {
     .contacto-botones {
         flex-direction: column;
         align-items: stretch;
+        margin-top: 28px;
     }
 
     .contacto-boton {
@@ -1508,6 +1545,11 @@ a {
         padding: 16px 18px;
         font-size: 13px;
         min-height: 52px;
+    }
+
+    .formulario-contacto {
+        max-width: 100%;
+        width: 100%;
     }
 
     .footer {
@@ -1550,17 +1592,13 @@ a {
     }
 
     .nav-social {
-        width: 30px;
-        height: 30px;
-    }
-
-    .nav-social svg {
-        width: 22px;
-        height: 22px;
+        display: inline-flex;
+        width: 36px;
+        height: 36px;
     }
 
     .hero {
-        min-height: 500px;
+        min-height: 520px;
         padding-top: 80px;
     }
 
@@ -1570,12 +1608,20 @@ a {
     }
 
     .hero h1 {
-        font-size: clamp(30px, 11vw, 42px);
+        font-size: clamp(32px, 11vw, 44px);
+        line-height: 0.96;
+    }
+
+    .hero-descripcion {
+        font-size: 14px;
     }
 
     .hero-botones .boton {
         width: 100%;
+        min-height: 56px;
         text-align: center;
+        padding: 18px 20px;
+        font-size: 14px;
     }
 
     .contacto-info h2 {
