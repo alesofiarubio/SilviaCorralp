@@ -8,9 +8,17 @@ const translations = {
     es: {
         navSobreMi: "Sobre mí",
         navServicios: "Servicios",
+        navPropiedades: "Propiedades",
         navProceso: "Forma de trabajar",
         navClientes: "Clientes",
         navHablemos: "Hablemos",
+        propertiesLabel: "DISPONIBLES",
+        propertiesTitle: "Una casa para cada<br>forma de vivir.",
+        propertiesIntro: "Selecciona una propiedad para consultar todos sus detalles y características.",
+        propertySale: "En venta",
+        propertyRent: "En alquiler",
+        propertyViewDetails: "Ver especificaciones",
+        propertyMoreInfo: "Más información",
         heroTitle: "TU PRÓXIMA DECISIÓN<br><span>Te ayudo a hacerla realidad.</span>",
         heroDescription: "Compra, venta y alquiler con criterio, cercanía y más de 35 años de experiencia acompañando decisiones inmobiliarias con claridad y confianza.",
         heroButton: "Cuéntame qué buscas →",
@@ -20,6 +28,14 @@ const translations = {
         aboutExperience: "de experiencia inmobiliaria",
         aboutQuote: '"Escuchar primero. Encontrar después."',
         aboutButton: "Mi forma de trabajar",
+        purposeLabel: "LO QUE GUÍA MI TRABAJO",
+        purposeTitle: "Decidir con claridad.<br>Avanzar con confianza.",
+        missionLabel: "MISIÓN",
+        missionTitle: "Acompañar cada decisión",
+        missionText: "Ofrecer un asesoramiento inmobiliario independiente, cercano y transparente. Con más de 35 años de experiencia, acompaño a cada cliente a valorar sus opciones y avanzar con claridad, desde la búsqueda hasta el cierre.",
+        visionLabel: "VISIÓN",
+        visionTitle: "Un nuevo lugar, una nueva etapa",
+        visionText: "Que toda decisión inmobiliaria se sienta como un paso elegido, no como una incertidumbre. Construir relaciones duraderas y ayudar a personas y familias a encontrar su lugar y comenzar una nueva etapa, entre Argentina, Miami y Madrid.",
         specialtiesLabel: "Especialidades",
         servicesLabel: "CÓMO PUEDO AYUDARTE",
         servicesTitle: "Un servicio a medida<br>de cada momento",
@@ -102,9 +118,17 @@ const translations = {
     en: {
         navSobreMi: "About me",
         navServicios: "Services",
+        navPropiedades: "Properties",
         navProceso: "How I work",
         navClientes: "Clients",
         navHablemos: "Let’s talk",
+        propertiesLabel: "AVAILABLE",
+        propertiesTitle: "A home for every<br>way of living.",
+        propertiesIntro: "Select a property to see its full details and features.",
+        propertySale: "For sale",
+        propertyRent: "For rent",
+        propertyViewDetails: "View details",
+        propertyMoreInfo: "More information",
         heroTitle: "YOUR NEXT MOVE<br><span>I help you turn it into reality.</span>",
         heroDescription: "Buying, selling and renting with sound judgement, a highly personal approach, and more than 30 years of experience guiding property decisions with clear strategy and confidence.",
         heroButton: "Tell me what you’re looking for →",
@@ -114,6 +138,14 @@ const translations = {
         aboutExperience: "of property experience",
         aboutQuote: '"Listen first. Then find the right fit."',
         aboutButton: "My approach",
+        purposeLabel: "WHAT GUIDES MY WORK",
+        purposeTitle: "Clarity in every decision.<br>Confidence in every step.",
+        missionLabel: "MISSION",
+        missionTitle: "Guiding every decision",
+        missionText: "Independent, thoughtful and transparent property guidance. With over 35 years of experience, I help each client assess their options and move forward clearly, from the search through to closing.",
+        visionLabel: "VISION",
+        visionTitle: "A new place, a new chapter",
+        visionText: "That every property decision feels like a chosen step, not a source of uncertainty. To build lasting relationships and help people and families find their place and begin a new chapter across Argentina, Miami and Madrid.",
         specialtiesLabel: "Specialties",
         servicesLabel: "HOW I CAN HELP",
         servicesTitle: "Tailored guidance<br>for every stage",
@@ -196,9 +228,17 @@ const translations = {
     pt: {
         navSobreMi: "Sobre mim",
         navServicios: "Serviços",
+        navPropiedades: "Imóveis",
         navProceso: "Como trabalho",
         navClientes: "Clientes",
         navHablemos: "Fale comigo",
+        propertiesLabel: "DISPONÍVEIS",
+        propertiesTitle: "Um lar para cada<br>forma de viver.",
+        propertiesIntro: "Selecione um imóvel para consultar todos os detalhes e características.",
+        propertySale: "À venda",
+        propertyRent: "Para alugar",
+        propertyViewDetails: "Ver detalhes",
+        propertyMoreInfo: "Mais informações",
         heroTitle: "SUA PRÓXIMA DECISÃO<br><span>Eu te ajudo a torná-la realidade.</span>",
         heroDescription: "Compra, venda e aluguel com critério, proximidade e mais de 30 anos de experiência apoiando decisões imobiliárias com clareza e confiança.",
         heroButton: "Conte-me o que procura →",
@@ -208,6 +248,14 @@ const translations = {
         aboutExperience: "de experiência imobiliária",
         aboutQuote: '"Ouvir primeiro. Encontrar depois."',
         aboutButton: "Como trabalho",
+        purposeLabel: "O QUE ORIENTA MEU TRABALHO",
+        purposeTitle: "Decidir com clareza.<br>Avançar com confiança.",
+        missionLabel: "MISSÃO",
+        missionTitle: "Acompanhar cada decisão",
+        missionText: "Oferecer uma assessoria imobiliária independente, próxima e transparente. Com mais de 35 anos de experiência, acompanho cada cliente na avaliação das opções e em cada etapa, da busca à conclusão.",
+        visionLabel: "VISÃO",
+        visionTitle: "Um novo lugar, uma nova etapa",
+        visionText: "Que cada decisão imobiliária seja vivida como um passo escolhido, não como uma incerteza. Construir relações duradouras e ajudar pessoas e famílias a encontrar seu lugar e começar uma nova etapa entre Argentina, Miami e Madri.",
         specialtiesLabel: "Especialidades",
         servicesLabel: "COMO POSSO AJUDAR",
         servicesTitle: "Um serviço sob medida<br>para cada momento",
@@ -452,6 +500,235 @@ const navWhatsapp = document.querySelector("#nav-whatsapp");
 if (navWhatsapp) {
     navWhatsapp.href =
         `https://wa.me/${datosContacto.whatsapp}?text=${encodeURIComponent(mensajeWhatsapp)}`;
+}
+
+document.querySelectorAll("[data-propiedad-contacto]").forEach((enlace) => {
+    const nombrePropiedad = enlace.dataset.propiedadContacto;
+    const mensaje = `Hola Silvia, me gustaría recibir más información sobre ${nombrePropiedad}.`;
+    enlace.href = `https://wa.me/${datosContacto.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+    enlace.target = "_blank";
+    enlace.rel = "noopener noreferrer";
+});
+
+const fotosPorPropiedad = {
+    "piso-1": ["puertaPiso1.jpeg"],
+    "piso-2": ["piso2.jpeg", "piso2.JPG"],
+    "piso-3": [
+        "piso3.jpeg",
+        "piso3 (1).JPG",
+        "piso3 (2).JPG",
+        "piso3 (3).JPG",
+        "piso3 (4).JPG",
+        "piso3 (5).JPG",
+        "piso3 (6).JPG",
+        "piso3 (7).JPG",
+        "piso3 (8).JPG",
+        "piso3 (9).JPG"
+    ],
+    "piso-4": [
+        "piso4 (9).jpeg",
+        "piso4 (10).jpeg",
+        "piso4 (11).jpeg",
+        "piso4 (12).jpeg",
+        "piso4 (13).jpeg",
+        "piso4 (14).jpeg",
+        "piso4 (15).jpeg",
+        "piso4 (16).jpeg"
+    ],
+    "piso-5": [
+        "piso5 (1).jpeg",
+        "piso5 (2).jpeg",
+        "piso5 (3).jpeg",
+        "piso5 (4).jpeg",
+        "piso5 (5).jpeg",
+        "piso5 (6).jpeg",
+        "piso5 (7).jpeg",
+        "piso5 (8).jpeg",
+        "piso5 (9).jpeg"
+    ]
+};
+
+const lightbox = document.querySelector("#property-lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxCount = document.querySelector("#lightbox-count");
+const lightboxPrevious = document.querySelector("#lightbox-prev");
+const lightboxNext = document.querySelector("#lightbox-next");
+const lightboxClose = document.querySelector("#lightbox-close");
+let lightboxPhotos = [];
+let lightboxPropertyId = "";
+let lightboxIndex = 0;
+
+const updateLightbox = () => {
+    if (!lightbox || !lightboxImage || !lightboxPhotos.length) return;
+
+    lightbox.dataset.propertyId = lightboxPropertyId;
+    lightboxImage.src = `img/${lightboxPhotos[lightboxIndex]}`;
+    lightboxImage.alt = lightboxPropertyId === "piso-1"
+        ? "Puerta de acceso al edificio, sin mostrar interiores ni el número del portal."
+        : `Fotografía ${lightboxIndex + 1} de la propiedad`;
+    lightboxCount.textContent = `${lightboxIndex + 1} / ${lightboxPhotos.length}`;
+    lightboxPrevious.disabled = lightboxIndex === 0;
+    lightboxNext.disabled = lightboxIndex === lightboxPhotos.length - 1;
+};
+
+const openLightbox = (propertyId, photos, index) => {
+    if (!lightbox) return;
+
+    lightboxPropertyId = propertyId;
+    lightboxPhotos = photos;
+    lightboxIndex = index;
+    updateLightbox();
+    document.documentElement.classList.add("property-lightbox-open");
+    document.body.classList.add("property-lightbox-open");
+    lightbox.showModal();
+};
+
+if (lightboxClose) {
+    lightboxClose.addEventListener("click", () => lightbox.close());
+}
+
+if (lightboxPrevious && lightboxNext) {
+    lightboxPrevious.addEventListener("click", () => {
+        if (lightboxIndex > 0) {
+            lightboxIndex -= 1;
+            updateLightbox();
+        }
+    });
+
+    lightboxNext.addEventListener("click", () => {
+        if (lightboxIndex < lightboxPhotos.length - 1) {
+            lightboxIndex += 1;
+            updateLightbox();
+        }
+    });
+}
+
+if (lightbox) {
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            lightbox.close();
+        }
+    });
+
+    lightbox.addEventListener("cancel", (event) => {
+        event.preventDefault();
+        lightbox.close();
+    });
+
+    lightbox.addEventListener("close", () => {
+        lightboxImage.removeAttribute("src");
+        lightbox.removeAttribute("data-property-id");
+        document.documentElement.classList.remove("property-lightbox-open");
+        document.body.classList.remove("property-lightbox-open");
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (!lightbox.open) return;
+
+        if (event.key === "Escape") {
+            event.preventDefault();
+            lightbox.close();
+        } else if (event.key === "ArrowLeft" && lightboxIndex > 0) {
+            event.preventDefault();
+            lightboxIndex -= 1;
+            updateLightbox();
+        } else if (event.key === "ArrowRight" && lightboxIndex < lightboxPhotos.length - 1) {
+            event.preventDefault();
+            lightboxIndex += 1;
+            updateLightbox();
+        }
+    });
+}
+
+const paginaPropiedad = document.querySelector("#property-page");
+if (paginaPropiedad) {
+    const propiedadId = new URLSearchParams(window.location.search).get("id");
+    const fichasPropiedad = paginaPropiedad.querySelectorAll("[data-property-id]");
+    const fichaSeleccionada = [...fichasPropiedad].find(
+        (ficha) => ficha.dataset.propertyId === propiedadId
+    );
+
+    if (fichaSeleccionada) {
+        fichaSeleccionada.hidden = false;
+        const tituloPropiedad = fichaSeleccionada.querySelector("h2");
+        document.title = `${tituloPropiedad.textContent} | Silvia Corral Propiedades`;
+
+        const galeria = fichaSeleccionada.querySelector("[data-property-gallery]");
+        const fotos = fotosPorPropiedad[propiedadId] || [];
+        if (fotos.length === 1) {
+            galeria.classList.add("property-gallery--single");
+        }
+
+        const marco = document.createElement("div");
+        marco.className = "property-carousel-frame";
+
+        const visor = document.createElement("div");
+        visor.className = "property-carousel-viewport";
+        visor.setAttribute("aria-label", "Carrusel de fotos; desliza o usa las flechas para cambiar de imagen");
+
+        const tira = document.createElement("div");
+        tira.className = "property-carousel-track";
+
+        let indiceActivo = 0;
+        const contador = document.createElement("span");
+        contador.className = "property-carousel-count";
+
+        const actualizarCarrusel = () => {
+            const ancho = Math.max(visor.clientWidth, 1);
+            indiceActivo = Math.min(fotos.length - 1, Math.round(visor.scrollLeft / ancho));
+            anterior.disabled = indiceActivo === 0;
+            siguiente.disabled = indiceActivo === fotos.length - 1;
+            contador.textContent = `${indiceActivo + 1} / ${fotos.length}`;
+        };
+
+        const cambiarFoto = (indice) => {
+            indiceActivo = Math.max(0, Math.min(fotos.length - 1, indice));
+            const fotoActual = tira.children[indiceActivo]?.querySelector("img");
+            if (fotoActual) fotoActual.loading = "eager";
+            visor.scrollTo({ left: indiceActivo * visor.clientWidth, behavior: "smooth" });
+            actualizarCarrusel();
+        };
+
+        const anterior = document.createElement("button");
+        anterior.type = "button";
+        anterior.className = "property-carousel-control property-carousel-prev";
+        anterior.setAttribute("aria-label", "Foto anterior");
+        anterior.textContent = "‹";
+        anterior.addEventListener("click", () => cambiarFoto(indiceActivo - 1));
+
+        const siguiente = document.createElement("button");
+        siguiente.type = "button";
+        siguiente.className = "property-carousel-control property-carousel-next";
+        siguiente.setAttribute("aria-label", "Foto siguiente");
+        siguiente.textContent = "›";
+        siguiente.addEventListener("click", () => cambiarFoto(indiceActivo + 1));
+
+        fotos.forEach((archivo, index) => {
+            const diapositiva = document.createElement("button");
+            diapositiva.type = "button";
+            diapositiva.className = "property-carousel-slide";
+            diapositiva.setAttribute("aria-label", `Ampliar fotografía ${index + 1} de ${fotos.length}`);
+
+            const imagen = document.createElement("img");
+            imagen.src = `img/${archivo}`;
+            imagen.alt = propiedadId === "piso-1"
+                ? "Puerta de acceso al edificio; no se muestran interiores ni el número del portal."
+                : `${tituloPropiedad.textContent}, fotografía ${index + 1}`;
+            imagen.loading = index === 0 ? "eager" : "lazy";
+            imagen.decoding = "async";
+            diapositiva.append(imagen);
+            diapositiva.addEventListener("click", () => openLightbox(propiedadId, fotos, index));
+            tira.append(diapositiva);
+        });
+
+        visor.append(tira);
+        marco.append(visor, anterior, siguiente, contador);
+        galeria.append(marco);
+        visor.addEventListener("scroll", () => window.requestAnimationFrame(actualizarCarrusel), { passive: true });
+        actualizarCarrusel();
+    } else {
+        window.location.replace("index.html#propiedades");
+    }
 }
 
 const navInstagram = document.querySelector("#nav-instagram");

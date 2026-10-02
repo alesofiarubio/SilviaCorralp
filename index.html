@@ -22,6 +22,7 @@
         <nav class="nav" id="nav-menu">
             <a href="#sobre-mi" data-i18n="navSobreMi">Sobre mí</a>
             <a href="#servicios" data-i18n="navServicios">Servicios</a>
+            <a href="#propiedades" data-i18n="navPropiedades">Propiedades</a>
             <a href="#proceso" data-i18n="navProceso">Forma de trabajar</a>
             <a href="#clientes" data-i18n="navClientes">Clientes</a>
 
@@ -139,6 +140,26 @@
             </a>
             </div>
         </section>
+        <section class="proposito" id="proposito">
+            <div class="proposito-interior">
+                <div class="proposito-cabecera">
+                    <p class="etiqueta" data-i18n="purposeLabel">LO QUE GUÍA MI TRABAJO</p>
+                    <h2 data-i18n-html="purposeTitle">Decidir con claridad.<br>Avanzar con confianza.</h2>
+                </div>
+                <div class="proposito-grid">
+                    <article class="proposito-item">
+                        <div class="proposito-superior"><span>01</span><span data-i18n="missionLabel">MISIÓN</span></div>
+                        <h3 data-i18n="missionTitle">Acompañar cada decisión</h3>
+                        <p data-i18n="missionText">Ofrecer un asesoramiento inmobiliario independiente, cercano y transparente. Con más de 35 años de experiencia, acompaño a cada cliente a valorar sus opciones y avanzar con claridad, desde la búsqueda hasta el cierre.</p>
+                    </article>
+                    <article class="proposito-item">
+                        <div class="proposito-superior"><span>02</span><span data-i18n="visionLabel">VISIÓN</span></div>
+                        <h3 data-i18n="visionTitle">Un nuevo lugar, una nueva etapa</h3>
+                        <p data-i18n="visionText">Que toda decisión inmobiliaria se sienta como un paso elegido, no como una incertidumbre. Construir relaciones duraderas y ayudar a personas y familias a encontrar su lugar y comenzar una nueva etapa, entre Argentina, Miami y Madrid.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 <!-- En esta seccion vamos a desarrollar el frontend de las especialidades de Silvia, como Feng Shui, 
 Barra Access, Facelift y Radio Stesia. Cada especialidad tendrá un artículo con un número, 
 un icono y un título. Al hacer clic en el icono, se desplegará más información sobre cada especialidad. -->
@@ -223,6 +244,37 @@ un icono y un título. Al hacer clic en el icono, se desplegará más informaci�
                 a fin.
             </p>
         </article>
+        </div>
+    </section>
+    <section class="propiedades" id="propiedades">
+        <div class="propiedades-cabecera">
+            <div>
+                <p class="etiqueta" data-i18n="propertiesLabel">DISPONIBLES</p>
+                <h2 data-i18n-html="propertiesTitle">Una casa para cada<br>forma de vivir.</h2>
+            </div>
+            <p class="propiedades-intro" data-i18n="propertiesIntro">Selecciona una propiedad para consultar todos sus detalles y características.</p>
+        </div>
+        <div class="propiedades-grid">
+            <a class="propiedad-tarjeta" href="propiedad.html?id=piso-1">
+                <div class="propiedad-imagen propiedad-imagen-1" role="img" aria-label="Solo se mostrará la puerta de acceso; no hay fotos interiores por confidencialidad"><span>Puerta de acceso · sin fotos interiores</span><span class="propiedad-operacion" data-i18n="propertySale">En venta</span></div>
+                <div class="propiedad-resumen"><p>Madrid, España · Barrio de Salamanca</p><h3>Piso de 2 habitaciones</h3><div class="propiedad-resumen-pie"><span>66 m²</span><strong>399.000 €</strong></div><span class="propiedad-enlace"><span data-i18n="propertyViewDetails">Ver especificaciones</span><span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="propiedad-tarjeta" href="propiedad.html?id=piso-2">
+                <div class="propiedad-imagen propiedad-imagen-2" role="img" aria-label="Fotografía del piso en General Oráa"><span>Fotos de la vivienda</span><span class="propiedad-operacion" data-i18n="propertySale">En venta</span></div>
+                <div class="propiedad-resumen"><p>Madrid, España · General Oráa</p><h3>Piso de 1 habitación</h3><div class="propiedad-resumen-pie"><span>59 m² · 7.ª planta</span><strong>750.000 €</strong></div><span class="propiedad-enlace"><span data-i18n="propertyViewDetails">Ver especificaciones</span><span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="propiedad-tarjeta" href="propiedad.html?id=piso-3">
+                <div class="propiedad-imagen propiedad-imagen-3" role="img" aria-label="Fotografía de la vivienda amoblada en Recoleta"><span>Fotos de la vivienda</span><span class="propiedad-operacion" data-i18n="propertyRent">En alquiler</span></div>
+                <div class="propiedad-resumen"><p>Recoleta · Buenos Aires, Argentina</p><h3>Vivienda amoblada</h3><div class="propiedad-resumen-pie"><span>3 habitaciones · Planta 9</span><strong>1.300 € / mes</strong></div><span class="propiedad-enlace"><span data-i18n="propertyViewDetails">Ver especificaciones</span><span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="propiedad-tarjeta" href="propiedad.html?id=piso-4">
+                <div class="propiedad-imagen propiedad-imagen-4" role="img" aria-label="Fotografía del ático en Chamberí"><span>Fotos de la vivienda</span><span class="propiedad-operacion" data-i18n="propertySale">En venta</span></div>
+                <div class="propiedad-resumen"><p>Chamberí · Madrid, España</p><h3>Ático de 1 dormitorio</h3><div class="propiedad-resumen-pie"><span>45 m² · Seguridad 24 h</span><strong>700.000 €</strong></div><span class="propiedad-enlace"><span data-i18n="propertyViewDetails">Ver especificaciones</span><span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="propiedad-tarjeta" href="propiedad.html?id=piso-5">
+                <div class="propiedad-imagen propiedad-imagen-5" role="img" aria-label="Fotografía del estudio en Solís"><span>Fotos de la vivienda</span><span class="propiedad-operacion" data-i18n="propertyRent">En alquiler</span></div>
+                <div class="propiedad-resumen"><p>Solís al 600 · Buenos Aires, Argentina</p><h3>Estudio amoblado</h3><div class="propiedad-resumen-pie"><span>28 m² · Wifi incluido</span><strong>500 USD / mes</strong></div><span class="propiedad-enlace"><span data-i18n="propertyViewDetails">Ver especificaciones</span><span aria-hidden="true">↗</span></span></div>
+            </a>
         </div>
     </section>
     <!-- Aqui le mostraremos una serie de pasos al usuario de como seria
@@ -791,6 +843,7 @@ un icono y un título. Al hacer clic en el icono, se desplegará más informaci�
 
             <a href="#sobre-mi" data-i18n="footerAbout">Sobre mí</a>
             <a href="#servicios" data-i18n="footerServices">Servicios</a>
+            <a href="#propiedades" data-i18n="navPropiedades">Propiedades</a>
             <a href="#proceso" data-i18n="footerProcess">Mi forma de trabajar</a>
             <a href="#clientes" data-i18n="footerClients">Clientes</a>
             <a href="#contacto" data-i18n="footerContact">Contacto</a>
